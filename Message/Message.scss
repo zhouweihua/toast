@@ -1,0 +1,38 @@
+
+.message {
+    position: fixed;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    transform: translateX(-50%);
+    transition: opacity 0.3s, transform .4s;
+    overflow: hidden;
+    width: 340px;
+    height: 70px;
+    line-height: 70px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.16);
+    border-radius: 100px;
+    top: 70px;
+    &.message-success {
+        background: #e1f3d8;
+        color: #67c23a;
+    }
+    &.message-error {
+        background: #fde2e2;
+        color: #fa5555;
+    }
+    &.message-info {
+        background: #ebeef5;
+        color: #878d99;
+    }
+    &.message-warning {
+        background: $common-color;
+        color: #fff;
+    }
+}
+
+.message-fade-enter,
+.message-fade-leave-active {
+    opacity: 0;
+    transform: translate(-50%, -100%);
+}
